@@ -1,0 +1,30 @@
+﻿
+@model mvcstock1.Models.Entity.products
+@{
+    ViewBag.Title = "BringProduct";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("UPDATE", "product", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(k => k.PRODUCTID)
+    @Html.TextBoxFor(k => k.PRODUCTID, new { @class = "form-control" })
+
+    @Html.LabelFor(k => k.PRODUCTNAME)
+    @Html.TextBoxFor(k => k.PRODUCTNAME, new { @class = "form-control" })
+
+    @Html.LabelFor(k => k.CATEGORY)
+    @Html.TextBoxFor(k => k.CATEGORY, new { @class = "form-control" })
+
+    @Html.LabelFor(k => k.STOCK)
+    @Html.TextBoxFor(k => k.STOCK, new { @class = "form-control" })
+
+    <div>
+        <button class="btn btn-warning">UPDATE PRODUCT</button>
+    </div>
+
+</div>
+}
+
+
